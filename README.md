@@ -24,5 +24,5 @@ steps to run the app
 
 Tested on Ubuntu and Windows, We hop it can run on Mac. also
 
-NOTE: keep the spotifylogin.py file in the same folder as twify.py
+NOTE: keep the spotify_login.py file in the same folder as twify.py
 
