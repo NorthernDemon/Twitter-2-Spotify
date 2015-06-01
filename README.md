@@ -17,7 +17,7 @@ steps to run the app
 3.Install Tkinter(Python's GUI package) .. (If your python is running from anaconda this step can be skiped .. this package is available in anaconda)
 	- $ sudo apt-get install python-tk
 
-4.run the app 
+4.run the app      
 	- $ python twify.py (or just double click the twify.py file if you are on windows)
 	- a GUI will pop up, type in your twitter account and name your playlist,
 
