@@ -19,7 +19,7 @@ steps to run the app
 
 4.run the app      
 	- $ python twify.py (or just double click the twify.py file if you are on windows)
-	- a GUI will pop up, type in your twitter account and name your playlist,
+	- A GUI will pop up, type in your twitter account and name your playlist,
 
 Tested on Ubuntu and Windows, We hop it can run on Mac. also
 
