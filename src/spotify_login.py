@@ -3,7 +3,9 @@ import re
 import BaseHTTPServer
 import urllib
 import webbrowser
-
+#we have used spotipy python library for spotify API, 
+#but in using it for user authentication we faced a problem that it remember tokens of previous user, 
+#so we modified the oauth2.py of spotipy with with some source code we found on git -- https://github.com/bitsofpancake/spotify-backup
 def prompt(scope, client_id, redirect_uri):
     ''' prompts the user to login returns the user token
 	suitable for use with the spotipy.Spotify constructor
