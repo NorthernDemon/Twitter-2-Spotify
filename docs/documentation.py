@@ -1,21 +1,29 @@
-def get_tweets():
+def get_twitter():
     """uses tweepy (twitter streaming API library for python) to get tweets of a user,
         -pass consumer key, consumer secret, access_token and access_token_secret to access the Twitter API using tweepy with OAuth.
         -initiate the API instance
+
+    """
+
+
+def get_tweets(client):
+    """uses tweepy (twitter streaming API library for python) to get tweets of a user,
         -get tweets for a user specified by the required screen_name parameter
         -remove junks(urls, utf-8, and other unwanted characters)
         -pop up error message in case of invalid user, or if user is not connected
         -return tweets
+
+        :param client: authenticated twitter object from get_twitter()
     """
 
 
-def followed_acc():
+def followed_acc(client):
     """uses tweepy (twitter streaming API library for python) to get tweets of a user,
-        -pass consumer key, consumer secret, access_token and access_token_secret to access the Twitter API using tweepy with OAuth.
-        -initiate the API instance
         -get ids of followed accounts by a user specified in the required screen_name parameter
         -get user screen names for each id
         -return accounts the user is following
+
+        :param client: authenticated twitter object from get_twitter()
     """
 
 
@@ -39,6 +47,7 @@ def create_playlist():
 def message(title, content):
     """
         -pop up messages(given header and message content)
+
         :param title: message title
         :param content: message content
     """
