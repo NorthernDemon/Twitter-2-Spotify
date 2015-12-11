@@ -12,11 +12,9 @@ def prompt(scope, client_id, redirect_uri):
     ''' prompts the user to login returns the user token
 	suitable for use with the spotipy.Spotify constructor
 
-        Parameters:
-
-         - scope - the desired scope of the request
-         - client_id - the client id of your app
-         - redirect_uri - the redirect URI of your app
+         :param scope: the desired scope of the request
+         :param client_id: the client id of your app
+         :param redirect_uri: the redirect URI of your app
     '''
 
     # Request for auto opening the browser and copying the access token

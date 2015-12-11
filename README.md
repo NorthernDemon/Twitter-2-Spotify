@@ -11,19 +11,19 @@ Requirements: *Python 2.7*, *tweepy*, *spotipy*, *Tkinter*
 
 1. Install **tweepy** (Twitter streaming API library for Python)
 	- $ pip install tweepy
-	- or clone from GitHub - https://github.com/tweepy/tweepy
+	OR
+	- git clone https://github.com/tweepy/tweepy.git
+	- python setup.py install
 
 2. Install **spotipy** (Spotify Web-API library for Python)
 	- $ pip install spotipy
-	- or clone from GitHub - https://github.com/plamere/spotipy
-
-3. Install **Tkinter** (Python's GUI package)
-    - if your python is running from anaconda this step can be skipped
-	- $ sudo apt-get install python-tk
+	OR
+	- git clone https://github.com/plamere/spotipy.git
+	- python setup.py install
 
 ####Run the application
-	- $ python twitter2python.py (or just double click the file if you are on windows)
-	- a GUI will pop up, type in your twitter account and name your playlist
+	- $ python twitter2python.py
+	- in GUI type your twitter account and name of your new playlist
 
 Authors
 -------

@@ -1,4 +1,4 @@
-def getTweets():
+def get_tweets():
     """uses tweepy (twitter streaming API library for python) to get tweets of a user,
         -pass consumer key, consumer secret, access_token and access_token_secret to access the Twitter API using tweepy with OAuth.
         -initiate the API instance
@@ -9,7 +9,7 @@ def getTweets():
     """
 
 
-def followedAcc():
+def followed_acc():
     """uses tweepy (twitter streaming API library for python) to get tweets of a user,
         -pass consumer key, consumer secret, access_token and access_token_secret to access the Twitter API using tweepy with OAuth.
         -initiate the API instance
@@ -19,7 +19,7 @@ def followedAcc():
     """
 
 
-def creatPlayList():
+def create_playlist():
     """Build profile and create playlist using spotipy (Spotify API library for python)
         -get the fine-tuned tweets from the getTweets function
         -request user permission on spotify to modify private playlist and get access token
@@ -39,6 +39,8 @@ def creatPlayList():
 def message(title, content):
     """
         -pop up messages(given header and message content)
+        :param title: message title
+        :param content: message content
     """
 
 
