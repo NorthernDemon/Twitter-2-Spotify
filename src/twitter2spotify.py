@@ -49,7 +49,7 @@ def get_tweets(client):
 
 # uses tweepy api to get accounts followed by the user
 # that method has limitation for account with over 100 followers (Twitter limits GET up to 100)
-def followed_acc(client):
+def followed_accounts(client):
     ids = []
     pages = tweepy.Cursor(client.friends_ids, screen_name=(userNameEntry.get())).pages()
     while len(ids) < 100:
@@ -101,7 +101,7 @@ def create_playlist():
                     musics.append(line[0])
 
             # Append all followed accounts to the list of suspected artist names
-            artists.extend(followed_acc(client))
+            artists.extend(followed_accounts(client))
 
             # Search for an artist match in the spotify music database
             for artist in artists:

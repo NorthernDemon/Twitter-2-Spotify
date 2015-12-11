@@ -17,7 +17,7 @@ def get_tweets(client):
     """
 
 
-def followed_acc(client):
+def followed_accounts(client):
     """uses tweepy (twitter streaming API library for python) to get tweets of a user,
         -get ids of followed accounts by a user specified in the required screen_name parameter
         -get user screen names for each id
