@@ -52,13 +52,13 @@ def get_tweets(client):
 def followed_accounts(client):
     ids = []
     pages = tweepy.Cursor(client.friends_ids, screen_name=(userNameEntry.get())).pages()
-    while len(ids) < 100:
+    while True:
         try:
             ids.extend(pages.next())
         except:
             break
     if ids:
-        return [user.screen_name for user in client.lookup_users(user_ids=ids)]
+        return [user.screen_name for user in client.lookup_users(user_ids=ids[:50])]
     else:
         return []
 
@@ -135,10 +135,10 @@ def create_playlist():
             print "Artists"
             for artist in artists:
                 print "  ", artist
-            print "Music Titles"
+            print "Music"
             for music in musics:
                 print "  ", music
-            print "Artists"
+            print "Artists Names"
             for artists in artist_name:
                 print "  ", artists
             print "Music Titles"
