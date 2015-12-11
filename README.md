@@ -22,8 +22,7 @@ Requirements: *Python 2.7*, *tweepy*, *spotipy*, *Tkinter*
 	- python setup.py install
 
 ####Run the application
-	- $ python twitter2python.py
-	- in GUI type your twitter account and name of your new playlist
+	- $ python twitter2python.py (type your twitter account and name of your new playlist)
 
 Authors
 -------
