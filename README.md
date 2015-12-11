@@ -1,26 +1,33 @@
-# twitter-spotify
-Application to Mine Twitter Account and Create a Spotify Music Playlist Aligned with User Interest
+Twitter 2 Spotify
+==============
 
-For this project we have used python 2.7. So, assuming that you have python 2.x installed, here are the 
-steps to run the app
+Introduction
+-------
+Data mining of Twitter account into Spotify playlist based on user interest.
 
-1. Install tweepy (twitter streaming API library for python) 
-		
+Installation
+-------
+Requirements: *Python 2.7*, *tweepy*, *spotipy*, *Tkinter*
+
+1. Install **tweepy** (Twitter streaming API library for Python)
 	- $ pip install tweepy
-	- Or it can also be cloned from Github and install it manually, - https://github.com/tweepy/tweepy
-	
-2.Install spotipy (Spotify web-API library for python)
+	OR
+	- git clone https://github.com/tweepy/tweepy.git
+	- python setup.py install
+
+2. Install **spotipy** (Spotify Web-API library for Python)
 	- $ pip install spotipy
+	OR
+	- git clone https://github.com/plamere/spotipy.git
+	- python setup.py install
 
-	- Or have a look at this github link - https://github.com/plamere/spotipy
+####Run the application
+	- $ python twitter2python.py
+	- type your twitter account and name of your new playlist
+	- Twitter small sample: danielAykadu
+	- Twitter large sample: justinbieber
+	- Check your Spotify playlist ;)
 
-3.Install Tkinter(Python's GUI package) .. (If your python is running from anaconda this step can be skiped .. this package is available in anaconda)
-	- $ sudo apt-get install python-tk
-
-4.run the app      
-	- $ python twify.py (or just double click the twify.py file if you are on windows)	
-	- A GUI will pop up, type in your twitter account and name your playlist,
-
-Tested on Ubuntu and Windows, We hop it can run on Mac. also
-
-NOTE: keep the spotify_login.py file in the same folder as twify.py
+Authors
+-------
+Daniel Aykadu and [Victor Ekimov](https://github.com/NorthernDemon)
