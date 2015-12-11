@@ -25,6 +25,7 @@ Requirements: *Python 2.7*, *tweepy*, *spotipy*, *Tkinter*
 	- $ python twitter2python.py
 	- type your twitter account and name of your new playlist
 	- Twitter small sample: danielAykadu
+	- Twitter large sample: justinbieber
 	- Check your Spotify playlist ;)
 
 Authors

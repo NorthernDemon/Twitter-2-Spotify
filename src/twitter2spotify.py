@@ -48,11 +48,19 @@ def get_tweets(client):
 
 
 # uses tweepy api to get accounts followed by the user
+# that method has limitation for account with over 100 followers (Twitter limits GET up to 100)
 def followed_acc(client):
     ids = []
-    for page in tweepy.Cursor(client.friends_ids, screen_name=(userNameEntry.get())).pages():
-        ids.extend(page)
-    return [user.screen_name for user in client.lookup_users(user_ids=ids)]
+    pages = tweepy.Cursor(client.friends_ids, screen_name=(userNameEntry.get())).pages()
+    while len(ids) < 100:
+        try:
+            ids.extend(pages.next())
+        except:
+            break
+    if ids:
+        return [user.screen_name for user in client.lookup_users(user_ids=ids)]
+    else:
+        return []
 
 
 # build profile and create playlist
@@ -103,8 +111,7 @@ def create_playlist():
                 # if the search returns any much, take the 1st artist in the list, and take top 5 tracks
                 if len(items) > 0:
                     artist = items[0]  # take the first in the list of matched artist names
-                    name = 'spotify:artist:' + artist['id']
-                    tracks = sp.artist_top_tracks(name)
+                    tracks = sp.artist_top_tracks('spotify:artist:' + artist['id'])
                     for track in tracks['tracks'][:3]:
                         if track['name'] not in all_tracks:
                             all_tracks[track['name']] = track['id']  # append the track id's in to the all_tracks dict
