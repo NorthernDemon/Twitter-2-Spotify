@@ -58,7 +58,7 @@ def followed_accounts(client):
         except:
             break
     if ids:
-        return [user.screen_name for user in client.lookup_users(user_ids=ids[:50])]
+        return [user.screen_name for user in client.lookup_users(user_ids=ids[:10])]
     else:
         return []
 
