@@ -50,15 +50,16 @@ def get_tweets(client):
 # uses tweepy api to get accounts followed by the user
 # that method has limitation for account with over 100 followers (Twitter limits GET up to 100)
 def followed_accounts(client):
+    max = 10
     ids = []
     pages = tweepy.Cursor(client.friends_ids, screen_name=(userNameEntry.get())).pages()
-    while True:
+    while len(ids) < max:
         try:
             ids.extend(pages.next())
         except:
             break
     if ids:
-        return [user.screen_name for user in client.lookup_users(user_ids=ids[:10])]
+        return [user.screen_name for user in client.lookup_users(user_ids=ids[:max])]
     else:
         return []
 
