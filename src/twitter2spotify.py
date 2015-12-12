@@ -148,12 +148,10 @@ def create_playlist():
             # Create a playlist and add all the track in the all_tracks dict to the playlist
             try:  # some times it takes too long for spotify to load tracks and it raise an exception error .. so we need to ask the user to try again
                 user = sp.me()['id']
-                playlist = playListEntry.get()
-                playListEntry.delete(0, END)
-                userNameEntry.delete(0, END)
-                new_playlist = sp.user_playlist_create(user, playlist, False)
+                new_playlist = sp.user_playlist_create(user, playListEntry.get(), False)
                 sp.user_playlist_add_tracks(user, new_playlist['id'], all_tracks.values())
-                message("Congrats!!", "Playlist \"" + playlist + "\" created!!, " + str(len(all_tracks)) + " tracks")
+                message("Congrats!!",
+                        "Playlist \"" + playListEntry.get() + "\" created!!, " + str(len(all_tracks)) + " tracks")
             except:
                 message("Please Try Again", "Looks like its taking too long for spotify to load your tracks")
         else:
@@ -188,6 +186,7 @@ userNameEntry = Entry(app, width=27, font=("Times", 16), fg="#81b71a")
 userNameEntry.pack()
 userNameEntry.place(x=225, y=22)
 userNameEntry.focus_set()
+userNameEntry.insert(END, 'danielAykadu')
 
 playListEntry = Entry(app, width=27, font=("Times", 16), fg="#81b71a")
 playListEntry.pack()
